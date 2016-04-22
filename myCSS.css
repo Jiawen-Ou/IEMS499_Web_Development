@@ -1,0 +1,270 @@
+
+
+.panel-body label {
+color: #512da8 !important; 
+}
+
+
+.collapsible {
+  border-top: 1px solid #ddd !important;
+  border-right: 1px solid #ddd !important;
+  border-left: 1px solid #ddd !important;
+  margin: 0.5rem 0 1rem 0 !important; 
+}
+
+.collapsible-header {
+  display: block !important;
+  cursor: pointer !important;
+  min-height: 3rem !important;
+  line-height: 3rem !important;
+  padding: 0 1rem !important;
+  background-color: #fff !important;
+  border-bottom: 1px solid #ddd !important; 
+}
+
+/*.collapsible-header i {
+    width: 2rem !important; 
+    font-size: 1.6rem !important;
+    line-height: 3rem !important;
+    display: block !important;
+    float: left !important;
+    text-align: center !important;
+    margin-right: 1rem !important; }*/
+
+/*.collapsible-body {
+  border-bottom: 1px solid #ddd !important;
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important; }*/
+/*  .collapsible-body p {
+    margin: 0 !important;
+    padding: 2rem !important; }*/
+
+.side-nav .collapsible {
+  border: none !important;
+  box-shadow: none !important; }
+  .side-nav .collapsible li {
+    padding: 0 !important; }
+
+.side-nav .collapsible-header {
+  background-color: transparent !important;
+  border: none !important;
+  line-height: inherit !important;
+  height: inherit !important;
+  margin: 0 1rem !important; }
+/*  .side-nav .collapsible-header i {
+    line-height: inherit !important; }*/
+
+/*.side-nav .collapsible-body {
+  border: 0 !important;
+  background-color: #fff !important; }
+  .side-nav .collapsible-body li a {
+    margin: 0 1rem 0 2rem !important; }*/
+
+
+/*  SIDE-NAV CSS */
+
+.side-nav {
+	position: fixed !important;
+	width: 240px !important;
+	left: -105% !important;
+	top: 0 !important;
+	margin: 0 !important;
+	height: 100% !important;
+	height: calc(100% + 60px) !important;
+	height: -moz-calc(100%) !important;
+	padding-bottom: 60px !important; 
+	background-color: #fff !important;
+	z-index: 999 !important;
+	will-change: left !important; 
+}
+
+.side-nav .collapsible {
+	margin: 0 !important; 
+}
+
+.side-nav li {
+float: none !important;
+padding: 0 15px !important; }
+.side-nav li:hover, .side-nav li.active {
+background-color: #ddd !important; }
+.side-nav a {
+color: #444 !important;
+display: block !important;
+font-size: 1.8rem !important;
+height: 64px !important;
+line-height: 64px !important;
+padding: 0 15px !important; }
+
+.side-nav.fixed a {
+display: block !important;
+padding: 0 15px !important;
+color: #444 !important; }
+
+.side-nav.fixed {
+left: 0 !important;
+position: fixed !important; }
+
+.side-nav .collapsible-body li.active,
+.side-nav.fixed .collapsible-body li.active {
+background-color: #ee6e73 !important; }
+.side-nav .collapsible-body li.active a,
+.side-nav.fixed .collapsible-body li.active a {
+color: #fff !important; }
+
+.subGroup  {
+  margin-top: 0.5rem ;
+  margin-right: 3rem ;
+  margin-bottom: 0 ; 
+  margin-left: 2rem;
+}
+
+/***************
+  Radio Buttons
+***************/
+/* Remove default Radio Buttons */
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+  position: absolute;
+  left: -9999px;
+  visibility: hidden; }
+
+[type="radio"]:not(:checked) + label,
+[type="radio"]:checked + label {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  font-size: 1.5rem;
+  color: #444 !important;
+  -webkit-transition: 0.28s ease;
+  -moz-transition: 0.28s ease;
+  -o-transition: 0.28s ease;
+  -ms-transition: 0.28s ease;
+  transition: 0.28s ease;
+  -webkit-user-select: none;
+  /* webkit (safari, chrome) browsers */
+  -moz-user-select: none;
+  /* mozilla browsers */
+  -khtml-user-select: none;
+  /* webkit (konqueror) browsers */
+  -ms-user-select: none;
+  /* IE10+ */ }
+
+[type="radio"] + label:before,
+[type="radio"] + label:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 4px;
+  width: 16px;
+  height: 16px;
+  z-index: 0;
+  -webkit-transition: 0.28s ease;
+  -moz-transition: 0.28s ease;
+  -o-transition: 0.28s ease;
+  -ms-transition: 0.28s ease;
+  transition: 0.28s ease; }
+
+/* Unchecked styles */
+[type="radio"]:not(:checked) + label:before {
+  border-radius: 50%;
+  border: 2px solid #5a5a5a; }
+
+[type="radio"]:not(:checked) + label:after {
+  border-radius: 50%;
+  border: 2px solid #5a5a5a;
+  z-index: -1;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0); }
+
+/* Checked styles */
+[type="radio"]:checked + label:before {
+  border-radius: 50%;
+  border: 2px solid transparent; }
+
+[type="radio"]:checked + label:after {
+  border-radius: 50%;
+  border: 2px solid #26a69a;
+  background-color: #26a69a;
+  z-index: 0;
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  transform: scale(1.02); }
+
+/* Radio With gap */
+[type="radio"].with-gap:checked + label:before {
+  border-radius: 50%;
+  border: 2px solid #26a69a; }
+
+[type="radio"].with-gap:checked + label:after {
+  border-radius: 50%;
+  border: 2px solid #26a69a;
+  background-color: #26a69a;
+  z-index: 0;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  transform: scale(0.5); }
+
+
+[type="radio"].with-gap:checked + label:before {
+    border-radius: 50% !important;
+    border: 2px solid #512da8 !important;
+}
+
+[type="radio"].with-gap:checked + label:after {
+    border: 2px solid #512da8 !important;
+    background-color: #512da8 !important;
+}
+
+
+.icon-success {
+    color: #7a7a7a;
+}
+
+
+#search {
+	text-decoration: none ;
+    color: #fff;
+    background-color: #512da8;
+    text-align: center;
+    letter-spacing: .5px;
+    border-radius: 2px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    outline: 0;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+#search i {
+	font-size: 1.8rem;
+    line-height: inherit;
+}
+
+/*#search:hover{
+  background-color:#512da8;
+}*/
+
+#search{
+  position:absolute;
+  left:10%;
+}
+
+.right {
+	float: right !important;
+	margin-left: 15px !important;
+}
+
