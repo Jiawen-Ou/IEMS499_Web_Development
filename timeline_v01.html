@@ -40,32 +40,50 @@
 
 
   // Create a DataSet (allows two way data-binding)
-  var tempDate = new Date(null,null,null,00,00,00,00);
-  var tempDate2 = new Date(null,null,null,00,00,01,300);
+  // var tempDate = new Date(null,null,null,00,00,00,00);
+  // var tempDate2 = new Date(null,null,null,00,00,01,300);
+
+  // var a = vis.moment([1900,10,01,00,00,00]);
   // var myDate = new Date (tempDate.getUTCDay());
 
   var items = new vis.DataSet([
-     {id: 1, content: '1', start: tempDate, end: tempDate2
-      , type: 'background'
+     {id: 1, content: '1', 
+      start: new Date(null,null,null,00,00,00,000),  
+      end: new Date(null,null,null,00,00,20,300), 
+      type: 'background'
    },
-      {id: 2, content: '2', start: tempDate2, end: new Date(null,null,null,00,00,40,500)
-    ,type: 'background', className: 'negative'
+      {id: 2, content: '2', 
+      start: new Date(null,null,null,00,00,20,300),  
+      end: new Date(null,null,null,00,01,40,500), 
+      type: 'background', 
+      className: 'negative'
     },
-
-     // {id: 3, content: 'item 3', start: '2013-04-18'},
-     // {id: 4, content: 'item 4', start: '2013-04-16', end: '2013-04-19'},
-     // {id: 5, content: 'item 5', start: '2013-04-25'},
-     // {id: 6, content: 'item 6', start: '2013-04-27'}
+      {id: 3, content: '3', 
+      start: new Date(null,null,null,00,01,40,500),  
+      end: new Date(null,null,null,00,02,40,500), 
+      type: 'background' 
+      // className: 'negative'
+    },
+      {id: 4, content: '4', 
+      start: new Date(null,null,null,00,02,40,500),  
+      end: new Date(null,null,null,00,04,00,100), 
+      type: 'background', 
+      className: 'negative'
+    },
   ]);
 
   // Configuration for the Timeline
   var options = {
-    // timeAxis: {scale: 'minute', step: },
-  moveable: false,
-  start: new Date(null,null,null,00,00,00,00),
-  end: new Date(null,null,null,00,03,00,00),
+  timeAxis: {scale: 'second', step: 10},
+  // moveable: false,
+  start: new Date(null,null,null,00,00,00,000),
+  end: new Date(null,null,null,00,04,00,100), 
+  min: new Date(null,null,null,00,00,00,00),
+  max: new Date(null,null,null,00,10,00,00),
   align: 'center',
   stack: true,
+  // zoomMin: 1000 * 60,           
+  // zoomMax: 1000 * 60 * 3     
 }
   // var options = {
   // width: '100%',
