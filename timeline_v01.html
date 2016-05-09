@@ -33,7 +33,7 @@
 
     .vis-item .vis-item-overflow {
     overflow: visible;
-    }
+    }id
 
     #visualization {
         position: relative;
@@ -80,52 +80,52 @@
 
   var items = new vis.DataSet([
      {id: 1, content: '1', 
-      start: new Date(null,null,null,00,00,00,000),  
-      end: new Date(null,null,null,00,00,20,300), 
+      start: "2010-01-01 00:00:00.000",  
+      end:   "2010-01-01 02:10:20.300", 
       type: 'background'
    },
       {id: 2, content: '2', 
-      start: new Date(null,null,null,00,00,20,300),  
-      end: new Date(null,null,null,00,01,40,500), 
+      start: "2010-01-01 02:10:20.300",  
+      end:   "2010-01-01 03:00:40.500", 
       type: 'background', 
       className: 'negative'
     },
-      {id: 3, content: '3', 
-      start: new Date(null,null,null,00,01,40,500),  
-      end: new Date(null,null,null,00,02,40,500), 
-      type: 'background' 
-      // className: 'negative'
-    },
-      {id: 4, content: '4', 
-      start: new Date(null,null,null,00,02,40,500),  
-      end: new Date(null,null,null,00,04,00,100), 
-      type: 'background', 
-      className: 'negative'
-    },
+    //   {id: 3, content: '3', 
+    //   start: new Date(null,null,null,00,01,40,500),  
+    //   end: new Date(null,null,null,00,02,40,500), 
+    //   type: 'background' 
+    //   // className: 'negative'
+    // },
+    //   {id: 4, content: '4', 
+    //   start: new Date(null,null,null,00,02,40,500),  
+    //   end: new Date(null,null,null,00,04,00,100), 
+    //   type: 'background', 
+    //   className: 'negative'
+    // },
   ]);
 
   // Configuration for the Timeline
   var options = {
-  timeAxis: {scale: 'second', step: 30},
-  moveable: false,
-  start: new Date(null,null,null,00,00,00,000),
-  end: new Date(null,null,null,00,10,00,100), 
-  min: new Date(null,null,null,00,00,00,00),
-  max: new Date(null,null,null,00,10,00,00),
+  // timeAxis: {scale: 'second', step: 30},
+  // moveable: false,
+  // start: 00-00-00-00-00-00-00,
+  // end: new Date(null,null,null,00,10,00,100), 
+  // min: new Date(null,null,null,00,00,00,00),
+  // max: new Date(null,null,null,00,10,00,00),
   align: 'center',
   stack: true,  
-  format:{
-          majorLabels: {
-            millisecond:'HH:mm:ss',
-            second:     'HH:mm',
-            minute:     '',
-            hour:       '',
-            weekday:    '',
-            day:        '',
-            month:      '',
-            year:       ''
-          }
-        },
+  // format:{
+  //         majorLabels: {
+  //           millisecond:'HH:mm:ss',
+  //           second:     'HH:mm',
+  //           minute:     '',
+  //           hour:       '',
+  //           weekday:    '',
+  //           day:        '',
+  //           month:      '',
+  //           year:       ''
+  //         }
+  //       },
   margin: {
       item: 5,
       axis: 40
@@ -133,6 +133,8 @@
   }
 
   var timeline = new vis.Timeline(container, items, options);
+
+  var x = new Date(null,null,null,00,10,00,100);
 
   var r = timeline.getWindow();
   var l = r.end - r.start;
