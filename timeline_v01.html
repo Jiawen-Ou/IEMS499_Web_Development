@@ -12,7 +12,8 @@
   <script src="vis/dist/vis.js"></script>
   <script type="text/javascript" language="javascript" src="timelineJS.js"></script>
   <link href="vis/dist/vis.css" rel="stylesheet" type="text/css" />
-
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script type="text/javascript" language="javascript" src="auto_dropdown_item.js"></script>
   <style>
 
     body, html {
@@ -26,9 +27,13 @@
 /*      box-shadow: 5px 5px 20px rgba(128,128,128, 0.5);*/
     }
 
-    .vis-item.vis-background.negative {
+    .vis-item.vis-background.odd {
       background-color: #512da8;
       color: #fff;
+    }
+    .vis-item.vis-background.even {
+      background-color: #fff;
+      color: #512da8;
     }
 
     .vis-item .vis-item-overflow {
@@ -51,21 +56,57 @@
         margin: 10px;
         z-index: 9999;
     }
+
+/*    .ui-slider .ui-slider-range 
+    { color: #512da8;
+      position: absolute; 
+      z-index: 1; 
+      font-size: .7em; 
+      display: block; 
+      border: 0; 
+      background-position: 0 0; }*/
+      .ui-slider .ui-slider-range { 
+        position:relative; 
+        z-index: 1; 
+        font-size: .7em; 
+        display: block; 
+        border: 1.0em; 
+        background-position: 0 0; 
+      }
+
+      .ui-slider .ui-slider-handle { 
+        position: absolute; 
+        z-index: 2; 
+        width: 0.8em; 
+        height: 1.8em; 
+        cursor: pointer; }
+
+      .ui-slider-horizontal { 
+        height: 1.5em; 
+      }
+
+
+      .ui-widget-header {
+        background:#512da8;
+        height:20px;
+        left:1px;
+        top:1px;
+        position:absolute;
+      }
   </style>
-
-
-
 
   
 </head>
 <body>
 
+<!-- <div ng-app="MyApp2" ng-controller="MyController2"> -->
+<h3> Body FrameNumber: </h3>
 <div id="visualization"></div>
 
-<div class="menu">
+<!-- <div class="menu">
     <input type="button" id="zoomIn" value="Zoom in"/>
     <input type="button" id="zoomOut" value="Zoom out"/>
-</div>
+</div> -->
 
 <p>
   <label for="amount">Range:</label>
@@ -79,29 +120,111 @@
   var container = document.getElementById('visualization');
 
   var items = new vis.DataSet([
-     {id: 1, content: '1', 
+    { id: 0, 
+      content: '0', 
       start: "2016-04-29 15:10:44.773",  
       end:   "2016-04-29 15:10:44.797", 
-      type: 'background'
-   },
-      {id: 2, content: '2', 
+      type: 'background',
+      className: 'even'
+    },
+    { id: 1, 
+      content: '1', 
       start: "2016-04-29 15:10:44.797",  
       end:   "2016-04-29 15:10:44.813", 
       type: 'background', 
-      className: 'negative'
+      className: 'odd'
     },
-    //   {id: 3, content: '3', 
-    //   start: new Date(null,null,null,00,01,40,500),  
-    //   end: new Date(null,null,null,00,02,40,500), 
-    //   type: 'background' 
-    //   // className: 'negative'
-    // },
-    //   {id: 4, content: '4', 
-    //   start: new Date(null,null,null,00,02,40,500),  
-    //   end: new Date(null,null,null,00,04,00,100), 
-    //   type: 'background', 
-    //   className: 'negative'
-    // },
+    { id: 2, 
+      content: '2', 
+      start: "2016-04-29 15:10:44.813",  
+      end:   "2016-04-29 15:10:44.829", 
+      type: 'background', 
+      className: 'even'
+    },
+    { id: 3, 
+      content: '3', 
+      start: "2016-04-29 15:10:44.829",  
+      end:   "2016-04-29 15:10:44.863", 
+      type: 'background', 
+      className: 'odd'
+    },
+    { id: 4, 
+      content: '4', 
+      start: "2016-04-29 15:10:44.863",  
+      end:   "2016-04-29 15:10:44.896", 
+      type: 'background', 
+      className: 'even'
+    },
+    { id: 5, 
+      content: '5', 
+      start: "2016-04-29 15:10:44.896",  
+      end:   "2016-04-29 15:10:44.929", 
+      type: 'background', 
+      className: 'odd'
+    },
+    { id: 6, 
+      content: '6', 
+      start: "2016-04-29 15:10:44.929",  
+      end:   "2016-04-29 15:10:44.963", 
+      type: 'background', 
+      className: 'even'
+    },
+    { id: 7, 
+      content: '7', 
+      start: "2016-04-29 15:10:44.963",  
+      end:   "2016-04-29 15:10:44.997", 
+      type: 'background', 
+      className: 'odd'
+    },
+    { id: 8, 
+      content: '8', 
+      start: "2016-04-29 15:10:44.997",  
+      end:   "2016-04-29 15:10:45.030", 
+      type: 'background', 
+      className: 'even'
+    },
+    { id: 9, 
+      content: '9', 
+      start: "2016-04-29 15:10:45.030",  
+      end:   "2016-04-29 15:10:45.064", 
+      type: 'background', 
+      className: 'odd'
+    },
+    { id: 10, 
+      content: '10', 
+      start: "2016-04-29 15:10:45.064",  
+      end:   "2016-04-29 15:10:45.097", 
+      type: 'background', 
+      className: 'even'
+    },
+    { id: 11, 
+      content: '11', 
+      start: "2016-04-29 15:10:45.097",  
+      end:   "2016-04-29 15:10:45.129", 
+      type: 'background', 
+      className: 'odd'
+    },
+    { id: 12, 
+      content: '12', 
+      start: "2016-04-29 15:10:45.129",  
+      end:   "2016-04-29 15:10:45.164", 
+      type: 'background', 
+      className: 'even'
+    },
+    { id: 13, 
+      content: '13', 
+      start: "2016-04-29 15:10:45.164",  
+      end:   "2016-04-29 15:10:45.197", 
+      type: 'background', 
+      className: 'odd'
+    },
+    { id: 14, 
+      content: '14', 
+      start: "2016-04-29 15:10:45.197",  
+      end:   "2016-04-29 15:10:45.230", 
+      type: 'background', 
+      className: 'even'
+    },
   ]);
 
   // Configuration for the Timeline
@@ -110,10 +233,11 @@
   // moveable: false,
   // start: 00-00-00-00-00-00-00,
   // end: new Date(null,null,null,00,10,00,100), 
-  // min: new Date(null,null,null,00,00,00,00),
-  // max: new Date(null,null,null,00,10,00,00),
+  min: "2016-04-29 15:10:44.773",
+  max: "2016-04-29 15:10:45.230",
   align: 'center',
   stack: true,  
+  // width: '50%',
   // format:{
   //         majorLabels: {
   //           millisecond:'HH:mm:ss',
@@ -127,8 +251,8 @@
   //         }
   //       },
   margin: {
-      item: 5,
-      axis: 40
+      item: 10,
+      axis: 20
     }
   }
 
@@ -164,8 +288,8 @@
       });
   }
 
-  document.getElementById('zoomIn').onclick    = function () { zoom(-0.2); };
-  document.getElementById('zoomOut').onclick   = function () { zoom( 0.2); };
+  // document.getElementById('zoomIn').onclick    = function () { zoom(-0.2); };
+  // document.getElementById('zoomOut').onclick   = function () { zoom( 0.2); };
 
   $(function() {
   $( "#slider-range" ).slider({
@@ -186,6 +310,6 @@
   });
 
 </script>
-
+<!-- </div>  -->     <!--  Angular div -->
 </body>
 </html>
