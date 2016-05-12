@@ -32,7 +32,7 @@
       color: #fff;
     }
     .vis-item.vis-background.even {
-      background-color: #fff;
+      background-color: #edeaf6;
       color: #512da8;
     }
 
@@ -87,7 +87,7 @@
 
 
       .ui-widget-header {
-        background:#512da8;
+        background:#dcd5ed;
         height:20px;
         left:1px;
         top:1px;
@@ -100,7 +100,7 @@
 <body>
 
 <!-- <div ng-app="MyApp2" ng-controller="MyController2"> -->
-<h3> Body FrameNumber: </h3>
+<!-- <h3> Body Frame Number: </h3> -->
 <div id="visualization"></div>
 
 <!-- <div class="menu">
@@ -117,18 +117,26 @@
 
 <script type="text/javascript">
  
+  var names = ['Body  Frame Number','Depth Frame Number'];
+  var groups = new vis.DataSet();
+  for (var g = 0; g < 3; g++) {
+    groups.add({id: g, content: names[g]});
+  }
+
   var container = document.getElementById('visualization');
 
   var items = new vis.DataSet([
     { id: 0, 
       content: '0', 
-      start: "2016-04-29 15:10:44.773",  
+      group : 0,
+      start: "2016-04-29 15:10:44.753",  
       end:   "2016-04-29 15:10:44.797", 
       type: 'background',
       className: 'even'
     },
     { id: 1, 
-      content: '1', 
+      content: '1',
+      group : 0, 
       start: "2016-04-29 15:10:44.797",  
       end:   "2016-04-29 15:10:44.813", 
       type: 'background', 
@@ -136,6 +144,7 @@
     },
     { id: 2, 
       content: '2', 
+      group : 0,
       start: "2016-04-29 15:10:44.813",  
       end:   "2016-04-29 15:10:44.829", 
       type: 'background', 
@@ -143,6 +152,7 @@
     },
     { id: 3, 
       content: '3', 
+      group : 0,
       start: "2016-04-29 15:10:44.829",  
       end:   "2016-04-29 15:10:44.863", 
       type: 'background', 
@@ -150,6 +160,7 @@
     },
     { id: 4, 
       content: '4', 
+      group : 0,
       start: "2016-04-29 15:10:44.863",  
       end:   "2016-04-29 15:10:44.896", 
       type: 'background', 
@@ -157,84 +168,133 @@
     },
     { id: 5, 
       content: '5', 
+      group : 0,
       start: "2016-04-29 15:10:44.896",  
+      end:   "2016-04-29 15:10:45.900", 
+      type: 'background', 
+      className: 'odd'
+    },
+    { id: 1000, 
+      content: '0', 
+      group : 1,
+      start: "2016-04-29 15:10:44.773",  
+      end:   "2016-04-29 15:10:44.797", 
+      type: 'background',
+      className: 'even'
+    },
+    { id: 1001, 
+      content: '1',
+      group : 1, 
+      start: "2016-04-29 15:10:44.797",  
+      end:   "2016-04-29 15:10:44.883", 
+      type: 'background', 
+      className: 'odd'
+    },
+    { id: 1002, 
+      content: '2', 
+      group : 1,
+      start: "2016-04-29 15:10:44.883",  
       end:   "2016-04-29 15:10:44.929", 
       type: 'background', 
-      className: 'odd'
+      className: 'even'
     },
-    { id: 6, 
-      content: '6', 
+    { id: 1003, 
+      content: '3', 
+      group : 1,
       start: "2016-04-29 15:10:44.929",  
-      end:   "2016-04-29 15:10:44.963", 
-      type: 'background', 
-      className: 'even'
-    },
-    { id: 7, 
-      content: '7', 
-      start: "2016-04-29 15:10:44.963",  
-      end:   "2016-04-29 15:10:44.997", 
+      end:   "2016-04-29 15:10:45.863", 
       type: 'background', 
       className: 'odd'
     },
-    { id: 8, 
-      content: '8', 
-      start: "2016-04-29 15:10:44.997",  
-      end:   "2016-04-29 15:10:45.030", 
+    { id: 1004, 
+      content: '4', 
+      group : 1,
+      start: "2016-04-29 15:10:45.863",  
+      end:   "2016-04-29 15:10:45.896", 
       type: 'background', 
       className: 'even'
     },
-    { id: 9, 
-      content: '9', 
-      start: "2016-04-29 15:10:45.030",  
-      end:   "2016-04-29 15:10:45.064", 
+    { id: 1005, 
+      content: '5', 
+      group : 1,
+      start: "2016-04-29 15:10:45.896",  
+      end:   "2016-04-29 15:10:45.929", 
       type: 'background', 
       className: 'odd'
     },
-    { id: 10, 
-      content: '10', 
-      start: "2016-04-29 15:10:45.064",  
-      end:   "2016-04-29 15:10:45.097", 
-      type: 'background', 
-      className: 'even'
-    },
-    { id: 11, 
-      content: '11', 
-      start: "2016-04-29 15:10:45.097",  
-      end:   "2016-04-29 15:10:45.129", 
-      type: 'background', 
-      className: 'odd'
-    },
-    { id: 12, 
-      content: '12', 
-      start: "2016-04-29 15:10:45.129",  
-      end:   "2016-04-29 15:10:45.164", 
-      type: 'background', 
-      className: 'even'
-    },
-    { id: 13, 
-      content: '13', 
-      start: "2016-04-29 15:10:45.164",  
-      end:   "2016-04-29 15:10:45.197", 
-      type: 'background', 
-      className: 'odd'
-    },
-    { id: 14, 
-      content: '14', 
-      start: "2016-04-29 15:10:45.197",  
-      end:   "2016-04-29 15:10:45.230", 
-      type: 'background', 
-      className: 'even'
-    },
+    // { id: 6, 
+    //   content: '6', 
+    //   start: "2016-04-29 15:10:44.929",  
+    //   end:   "2016-04-29 15:10:44.963", 
+    //   type: 'background', 
+    //   className: 'even'
+    // },
+    // { id: 7, 
+    //   content: '7', 
+    //   start: "2016-04-29 15:10:44.963",  
+    //   end:   "2016-04-29 15:10:44.997", 
+    //   type: 'background', 
+    //   className: 'odd'
+    // },
+    // { id: 8, 
+    //   content: '8', 
+    //   start: "2016-04-29 15:10:44.997",  
+    //   end:   "2016-04-29 15:10:45.030", 
+    //   type: 'background', 
+    //   className: 'even'
+    // },
+    // { id: 9, 
+    //   content: '9', 
+    //   start: "2016-04-29 15:10:45.030",  
+    //   end:   "2016-04-29 15:10:45.064", 
+    //   type: 'background', 
+    //   className: 'odd'
+    // },
+    // { id: 10, 
+    //   content: '10', 
+    //   start: "2016-04-29 15:10:45.064",  
+    //   end:   "2016-04-29 15:10:45.097", 
+    //   type: 'background', 
+    //   className: 'even'
+    // },
+    // { id: 11, 
+    //   content: '11', 
+    //   start: "2016-04-29 15:10:45.097",  
+    //   end:   "2016-04-29 15:10:45.129", 
+    //   type: 'background', 
+    //   className: 'odd'
+    // },
+    // { id: 12, 
+    //   content: '12', 
+    //   start: "2016-04-29 15:10:45.129",  
+    //   end:   "2016-04-29 15:10:45.164", 
+    //   type: 'background', 
+    //   className: 'even'
+    // },
+    // { id: 13, 
+    //   content: '13', 
+    //   start: "2016-04-29 15:10:45.164",  
+    //   end:   "2016-04-29 15:10:45.197", 
+    //   type: 'background', 
+    //   className: 'odd'
+    // },
+    // { id: 14, 
+    //   content: '14', 
+    //   start: "2016-04-29 15:10:45.197",  
+    //   end:   "2016-04-29 15:10:45.230", 
+    //   type: 'background', 
+    //   className: 'even'
+    // },
   ]);
 
   // Configuration for the Timeline
   var options = {
   // timeAxis: {scale: 'second', step: 30},
-  // moveable: false,
+  moveable: false,
   // start: 00-00-00-00-00-00-00,
   // end: new Date(null,null,null,00,10,00,100), 
-  min: "2016-04-29 15:10:44.773",
-  max: "2016-04-29 15:10:45.230",
+  // min: "2016-04-29 15:10:44.773",
+  // max: "2016-04-29 15:10:45.230",
   align: 'center',
   stack: true,  
   // width: '50%',
@@ -251,14 +311,15 @@
   //         }
   //       },
   margin: {
-      item: 10,
-      axis: 20
+      item: 20,
+      axis: 0
     }
   }
 
   var timeline = new vis.Timeline(container, items, options);
+  timeline.setGroups(groups);
 
-  var x = new Date(null,null,null,00,10,00,100);
+  // var x = new Date(null,null,null,00,10,00,100);
 
   var r = timeline.getWindow();
   var l = r.end - r.start;
@@ -272,8 +333,8 @@
       timeline.setWindow({
           // start: range.start.valueOf() - interval * percentage,
           // end:   range.end.valueOf()   - interval * percentage
-          start: s + l*percentage1,
-          end: s + l*percentage2
+          start: s + l*(percentage1-0.02),
+          end: s + l*(percentage2+0.02)
       });
   }
 
