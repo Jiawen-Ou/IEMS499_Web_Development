@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://129.105.36.182/project2/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <!--Import Google Icon Font-->
+     <link href="./project2_files/icon" rel="stylesheet">
+     <!--Import materialize.css-->
+     <link type="text/css" rel="stylesheet" href="./project2_files/materialize.css" media="screen,projection">
+     <!--Let browser know website is optimized for mobile-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- for icon -->
+     <link href="./project2_files/icon(1)" rel="stylesheet">
+     <!-- myStyleSheet -->
+     <link type="text/css" rel="stylesheet" href="./project2_files/myStyleSheet.css" media="screen,projection">
+     <!-- drop-down -->
+     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+     <!-- dateTime -->
+     <!-- <link href = "jqueryUI/jquery-ui.min.css" rel="stylesheet"> -->
+     <!-- <link href = "datetime/jquery-ui-timepicker-addon.css" rel="stylesheet"> -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="./project2_files/d3.min.js" charset="utf-8"></script>
+      <!-- dropdown-->
+      <script type="text/javascript" language="javascript" src="../auto_dropdown_item.js"></script>
+
+  </head>
+
+
+
+  <body>
+    
+
+    <!-- whole nav bar: top and left -->
+    <nav class="deep-purple darken-2">
+       <!-- top nav -->
+       <a href="http://129.105.36.182/project2/#" class="brand-logo .center" id="myLogo">HDV</a>
+       <ul id="nav-mobile" class="right ">
+         <li id="iconList"><i class="small material-icons" id="setIcon">settings</i></li>
+       </ul>
+       <!-- left nav -->
+        <ul id="slide-out" class="side-nav fixed" style="width: 240px;">
+          <!-- return all data -->
+          <form method="post" id="myForm">
+            <!-- building -->
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li class="">
+                  <a class="collapsible-header" id="building">Building: #3<i class="mdi-navigation-arrow-drop-down"></i></a>
+                  <div class="collapsible-body" style="display: none;">
+                    <ul class="subGroup">
+                      <li>
+                      <input class="with-gap" name="bn" type="radio" id="test1" value="1">
+                      <label for="test1">One</label>
+                      </li>
+                      <li>
+                        <input class="with-gap" name="bn" type="radio" id="test2" value="2">
+                        <label for="test2">Two</label>
+                      </li>
+                      <li>
+                        <input class="with-gap" name="bn" type="radio" id="test3" value="3">
+                        <label for="test3">Three</label>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <!-- room -->
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li class="">
+                  <a class="collapsible-header" id="room">Room<i class="mdi-navigation-arrow-drop-down"></i></a>
+                  <div class="collapsible-body" style="display: none;">
+                    <ul class="subGroup">
+                      <li>
+                      <input class="with-gap" name="rn" type="radio" id="rn1" value="1">
+                      <label for="rn1">One</label>
+                      </li>
+                      <li>
+                        <input class="with-gap" name="rn" type="radio" id="rn2" value="2">
+                        <label for="rn2">Two</label>
+                      </li>
+                      <li>
+                        <input class="with-gap" name="rn" type="radio" id="rn3" value="3">
+                        <label for="rn3">Three</label>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Kinect  -->
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li class="">
+                  <a class="collapsible-header" id="kinect">Kinect<i class="mdi-navigation-arrow-drop-down"></i></a>
+                  <div class="collapsible-body" style="display: none;">
+                    <ul class="subGroup">
+                      <li>
+                      <input class="with-gap" name="kn" type="radio" id="kn1" value="1">
+                      <label for="kn1">One</label>
+                      </li>
+                      <li>
+                        <input class="with-gap" name="kn" type="radio" id="kn2" value="2">
+                        <label for="kn2">Two</label>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+
+            <!-- time -->
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li class="">
+                  <a class="collapsible-header" id="time">TimeRange<i class="mdi-navigation-arrow-drop-down"></i></a>
+                  <div class="collapsible-body" style="display: none;">
+                    <ul class="subGroup">
+                      <!-- From -->
+                      <li>
+                        <div class="input-field">
+                          <input placeholder="Date" name="fromDate" id="fromDate" type="text" class="datepicker picker__input" readonly="" tabindex="-1" aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="fromDate_root"><div class="picker" id="fromDate_root" tabindex="0" aria-hidden="true"><div class="picker__holder"><div class="picker__frame"><div class="picker__wrap"><div class="picker__box"><div class="picker__date-display"><div class="picker__weekday-display">Wednesday</div><div class="picker__month-display"><div>Apr</div></div><div class="picker__day-display"><div>20</div></div><div class="picker__year-display"><div>2016</div></div></div><div class="picker__calendar-container"><div class="picker__header"><select class="picker__select--month browser-default" disabled="" aria-controls="fromDate_table" title="Select a month"><option value="0">January</option><option value="1">February</option><option value="2">March</option><option value="3" selected="">April</option><option value="4">May</option><option value="5">June</option><option value="6">July</option><option value="7">August</option><option value="8">September</option><option value="9">October</option><option value="10">November</option><option value="11">December</option></select><select class="picker__select--year browser-default" disabled="" aria-controls="fromDate_table" title="Select a year"><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016" selected="">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option></select><div class="picker__nav--prev" data-nav="-1" role="button" aria-controls="fromDate_table" title="Previous month"> </div><div class="picker__nav--next" data-nav="1" role="button" aria-controls="fromDate_table" title="Next month"> </div></div><table class="picker__table" id="fromDate_table" role="grid" aria-controls="fromDate" aria-readonly="true"><thead><tr><th class="picker__weekday" scope="col" title="Sunday">S</th><th class="picker__weekday" scope="col" title="Monday">M</th><th class="picker__weekday" scope="col" title="Tuesday">T</th><th class="picker__weekday" scope="col" title="Wednesday">W</th><th class="picker__weekday" scope="col" title="Thursday">T</th><th class="picker__weekday" scope="col" title="Friday">F</th><th class="picker__weekday" scope="col" title="Saturday">S</th></tr></thead><tbody><tr><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1459054800000" role="gridcell" aria-label="2016-03-27">27</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1459141200000" role="gridcell" aria-label="2016-03-28">28</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1459227600000" role="gridcell" aria-label="2016-03-29">29</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1459314000000" role="gridcell" aria-label="2016-03-30">30</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1459400400000" role="gridcell" aria-label="2016-03-31">31</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1459486800000" role="gridcell" aria-label="2016-04-01">1</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1459573200000" role="gridcell" aria-label="2016-04-02">2</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1459659600000" role="gridcell" aria-label="2016-04-03">3</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1459746000000" role="gridcell" aria-label="2016-04-04">4</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1459832400000" role="gridcell" aria-label="2016-04-05">5</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1459918800000" role="gridcell" aria-label="2016-04-06">6</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460005200000" role="gridcell" aria-label="2016-04-07">7</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460091600000" role="gridcell" aria-label="2016-04-08">8</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460178000000" role="gridcell" aria-label="2016-04-09">9</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460264400000" role="gridcell" aria-label="2016-04-10">10</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460350800000" role="gridcell" aria-label="2016-04-11">11</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460437200000" role="gridcell" aria-label="2016-04-12">12</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460523600000" role="gridcell" aria-label="2016-04-13">13</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460610000000" role="gridcell" aria-label="2016-04-14">14</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460696400000" role="gridcell" aria-label="2016-04-15">15</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460782800000" role="gridcell" aria-label="2016-04-16">16</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460869200000" role="gridcell" aria-label="2016-04-17">17</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460955600000" role="gridcell" aria-label="2016-04-18">18</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1461042000000" role="gridcell" aria-label="2016-04-19">19</div></td><td role="presentation"><div class="picker__day picker__day--infocus picker__day--today picker__day--highlighted" data-pick="1461128400000" role="gridcell" aria-label="2016-04-20" aria-activedescendant="true">20</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1461214800000" role="gridcell" aria-label="2016-04-21">21</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1461301200000" role="gridcell" aria-label="2016-04-22">22</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1461387600000" role="gridcell" aria-label="2016-04-23">23</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1461474000000" role="gridcell" aria-label="2016-04-24">24</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1461560400000" role="gridcell" aria-label="2016-04-25">25</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1461646800000" role="gridcell" aria-label="2016-04-26">26</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1461733200000" role="gridcell" aria-label="2016-04-27">27</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1461819600000" role="gridcell" aria-label="2016-04-28">28</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1461906000000" role="gridcell" aria-label="2016-04-29">29</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1461992400000" role="gridcell" aria-label="2016-04-30">30</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1462078800000" role="gridcell" aria-label="2016-05-01">1</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1462165200000" role="gridcell" aria-label="2016-05-02">2</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1462251600000" role="gridcell" aria-label="2016-05-03">3</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1462338000000" role="gridcell" aria-label="2016-05-04">4</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1462424400000" role="gridcell" aria-label="2016-05-05">5</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1462510800000" role="gridcell" aria-label="2016-05-06">6</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1462597200000" role="gridcell" aria-label="2016-05-07">7</div></td></tr></tbody></table></div><div class="picker__footer"><button class="btn-flat picker__today" type="button" data-pick="1461128400000" disabled="" aria-controls="fromDate">Today</button><button class="btn-flat picker__clear" type="button" data-clear="1" disabled="" aria-controls="fromDate">Clear</button><button class="btn-flat picker__close" type="button" data-close="true" disabled="" aria-controls="fromDate">Close</button></div></div></div></div></div></div>
+                          <label for="fromInput" class="active">From: </label>
+                        </div>
+                      </li>
+
+                      <li>
+                        <!-- <div class="input-field"> -->
+                          <input placeholder="Time" name="fromTime" id="fromTime" type="time" step="1" class="timePicker" style="width:80%;">
+                          <!-- <label for="fromInput">From: </label> -->
+                        <!-- </div> -->
+                      </li>
+                      <!-- To -->
+                      <li>
+                        <div class="input-field">
+                          <input placeholder="Date" name="toDate" id="toInput" type="text" class="datepicker picker__input" readonly="" tabindex="-1" aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="toInput_root"><div class="picker" id="toInput_root" tabindex="0" aria-hidden="true"><div class="picker__holder"><div class="picker__frame"><div class="picker__wrap"><div class="picker__box"><div class="picker__date-display"><div class="picker__weekday-display">Wednesday</div><div class="picker__month-display"><div>Apr</div></div><div class="picker__day-display"><div>20</div></div><div class="picker__year-display"><div>2016</div></div></div><div class="picker__calendar-container"><div class="picker__header"><select class="picker__select--month browser-default" disabled="" aria-controls="toInput_table" title="Select a month"><option value="0">January</option><option value="1">February</option><option value="2">March</option><option value="3" selected="">April</option><option value="4">May</option><option value="5">June</option><option value="6">July</option><option value="7">August</option><option value="8">September</option><option value="9">October</option><option value="10">November</option><option value="11">December</option></select><select class="picker__select--year browser-default" disabled="" aria-controls="toInput_table" title="Select a year"><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016" selected="">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option></select><div class="picker__nav--prev" data-nav="-1" role="button" aria-controls="toInput_table" title="Previous month"> </div><div class="picker__nav--next" data-nav="1" role="button" aria-controls="toInput_table" title="Next month"> </div></div><table class="picker__table" id="toInput_table" role="grid" aria-controls="toInput" aria-readonly="true"><thead><tr><th class="picker__weekday" scope="col" title="Sunday">S</th><th class="picker__weekday" scope="col" title="Monday">M</th><th class="picker__weekday" scope="col" title="Tuesday">T</th><th class="picker__weekday" scope="col" title="Wednesday">W</th><th class="picker__weekday" scope="col" title="Thursday">T</th><th class="picker__weekday" scope="col" title="Friday">F</th><th class="picker__weekday" scope="col" title="Saturday">S</th></tr></thead><tbody><tr><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1459054800000" role="gridcell" aria-label="2016-03-27">27</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1459141200000" role="gridcell" aria-label="2016-03-28">28</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1459227600000" role="gridcell" aria-label="2016-03-29">29</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1459314000000" role="gridcell" aria-label="2016-03-30">30</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1459400400000" role="gridcell" aria-label="2016-03-31">31</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1459486800000" role="gridcell" aria-label="2016-04-01">1</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1459573200000" role="gridcell" aria-label="2016-04-02">2</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1459659600000" role="gridcell" aria-label="2016-04-03">3</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1459746000000" role="gridcell" aria-label="2016-04-04">4</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1459832400000" role="gridcell" aria-label="2016-04-05">5</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1459918800000" role="gridcell" aria-label="2016-04-06">6</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460005200000" role="gridcell" aria-label="2016-04-07">7</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460091600000" role="gridcell" aria-label="2016-04-08">8</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460178000000" role="gridcell" aria-label="2016-04-09">9</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460264400000" role="gridcell" aria-label="2016-04-10">10</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460350800000" role="gridcell" aria-label="2016-04-11">11</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460437200000" role="gridcell" aria-label="2016-04-12">12</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460523600000" role="gridcell" aria-label="2016-04-13">13</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460610000000" role="gridcell" aria-label="2016-04-14">14</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460696400000" role="gridcell" aria-label="2016-04-15">15</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460782800000" role="gridcell" aria-label="2016-04-16">16</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460869200000" role="gridcell" aria-label="2016-04-17">17</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1460955600000" role="gridcell" aria-label="2016-04-18">18</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1461042000000" role="gridcell" aria-label="2016-04-19">19</div></td><td role="presentation"><div class="picker__day picker__day--infocus picker__day--today picker__day--highlighted" data-pick="1461128400000" role="gridcell" aria-label="2016-04-20" aria-activedescendant="true">20</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1461214800000" role="gridcell" aria-label="2016-04-21">21</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1461301200000" role="gridcell" aria-label="2016-04-22">22</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1461387600000" role="gridcell" aria-label="2016-04-23">23</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1461474000000" role="gridcell" aria-label="2016-04-24">24</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1461560400000" role="gridcell" aria-label="2016-04-25">25</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1461646800000" role="gridcell" aria-label="2016-04-26">26</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1461733200000" role="gridcell" aria-label="2016-04-27">27</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1461819600000" role="gridcell" aria-label="2016-04-28">28</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1461906000000" role="gridcell" aria-label="2016-04-29">29</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1461992400000" role="gridcell" aria-label="2016-04-30">30</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1462078800000" role="gridcell" aria-label="2016-05-01">1</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1462165200000" role="gridcell" aria-label="2016-05-02">2</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1462251600000" role="gridcell" aria-label="2016-05-03">3</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1462338000000" role="gridcell" aria-label="2016-05-04">4</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1462424400000" role="gridcell" aria-label="2016-05-05">5</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1462510800000" role="gridcell" aria-label="2016-05-06">6</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1462597200000" role="gridcell" aria-label="2016-05-07">7</div></td></tr></tbody></table></div><div class="picker__footer"><button class="btn-flat picker__today" type="button" data-pick="1461128400000" disabled="" aria-controls="toInput">Today</button><button class="btn-flat picker__clear" type="button" data-clear="1" disabled="" aria-controls="toInput">Clear</button><button class="btn-flat picker__close" type="button" data-close="true" disabled="" aria-controls="toInput">Close</button></div></div></div></div></div></div>
+                          <label for="fromInput" class="active">To: </label>
+                        </div>
+                      </li>
+
+                      <li>
+                        <!-- <div class="input-field"> -->
+                          <input placeholder="Time" name="toTime" id="toTime" type="time" step="1" class="timePicker" style="width:80%;">
+                          <!-- <label for="fromInput">From: </label> -->
+                        <!-- </div> -->
+                      </li>
+
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+
+
+            <!-- search -->
+            <button class="btn waves-effect waves-light" type="submit" name="mySubmit" id="search">Search
+              <i class="material-icons right">send</i>
+            </button>
+          </form>
+        </ul>
+        <a href="http://129.105.36.182/project2/#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    </nav>
+
+    <div id="contentWrapper">
+      <div class="container">
+        <!-- offset if we use id the offset will not working -->
+        <div class="row">
+          <!-- <video width="320" height="240" autoplay>
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+          </video> -->
+          <div class="col s12 m8 l8 videoFrame">
+            <video width="100%" height="100%" controls="" poster="" id="myVideo">
+              <source src="./video/glacier.mp4" type="video/mp4" id="source">
+              <!-- <source src="movie.ogg" type="video/ogg"> -->
+            </video>
+          </div>
+          <div class="col s12 m4 l4 videoList" id="videoListId">
+            <p class="flow-text">s12 m4 l4</p>
+            <p class="flow-text">s12 m4 l4</p>
+            <p class="flow-text">s12 m4 l4</p>
+            <p class="flow-text">s12 m4 l4</p>
+            <p class="flow-text">s12 m4 l4</p>
+            <p class="flow-text">s12 m4 l4</p>
+            <p class="flow-text">s12 m4 l4</p>
+            <p class="flow-text">s12 m4 l4</p>
+            <p class="flow-text">s12 m4 l4</p>
+            <p class="flow-text">s12 m4 l4</p>
+            <p class="flow-text">s12 m4 l4</p>
+            <p class="flow-text">s12 m4 l4</p>
+            <p class="flow-text">s12 m4 l4</p>
+            <p class="flow-text">s12 m4 l4</p>
+            <p class="flow-text">s12 m4 l4</p>
+            <p class="flow-text">s12 m4 l4</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m8 l8 eventFrame" style="background-color:transparent">
+            <div id="graph" style="position: relative; height: 100%">
+            <div id="chartdiv" style="position: relative; height: 100%; overflow: hidden; text-align: left;"><div class="amcharts-main-div" style="position: relative;"><div class="amcharts-chart-div" style="overflow: hidden; position: relative; text-align: left; width: 613px; height: 446px; padding: 0px; cursor: default; touch-action: none;"><svg version="1.1" style="position: absolute; width: 613px; height: 446px; top: 0px; left: 0px;"><desc>JavaScript chart by amCharts 3.20.3</desc><g><path cs="100,100" d="M0.5,0.5 L612.5,0.5 L612.5,445.5 L0.5,445.5 Z" fill="#FFFFFF" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0"></path><path cs="100,100" d="M0.5,0.5 L541.5,0.5 L541.5,295.5 L0.5,295.5 L0.5,0.5 Z" fill="#FFFFFF" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0" transform="translate(51,20)"></path></g><g><g transform="translate(51,0)" visibility="hidden"></g><g transform="translate(51,20)"><g><path cs="100,100" d="M0.5,0.5 L0.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(0,295)"></path><path cs="100,100" d="M0.5,295.5 L0.5,295.5 L0.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M26.5,295.5 L26.5,295.5 L26.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M52.5,295.5 L52.5,295.5 L52.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M77.5,295.5 L77.5,295.5 L77.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M103.5,295.5 L103.5,295.5 L103.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M129.5,0.5 L129.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(0,295)"></path><path cs="100,100" d="M129.5,295.5 L129.5,295.5 L129.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M155.5,295.5 L155.5,295.5 L155.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M180.5,295.5 L180.5,295.5 L180.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M206.5,295.5 L206.5,295.5 L206.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M232.5,295.5 L232.5,295.5 L232.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M258.5,0.5 L258.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(0,295)"></path><path cs="100,100" d="M258.5,295.5 L258.5,295.5 L258.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M283.5,295.5 L283.5,295.5 L283.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M309.5,295.5 L309.5,295.5 L309.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M335.5,295.5 L335.5,295.5 L335.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M361.5,295.5 L361.5,295.5 L361.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M386.5,0.5 L386.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(0,295)"></path><path cs="100,100" d="M386.5,295.5 L386.5,295.5 L386.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M412.5,295.5 L412.5,295.5 L412.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M438.5,295.5 L438.5,295.5 L438.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M464.5,295.5 L464.5,295.5 L464.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M489.5,295.5 L489.5,295.5 L489.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M515.5,0.5 L515.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(0,295)"></path><path cs="100,100" d="M515.5,295.5 L515.5,295.5 L515.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M541.5,295.5 L541.5,295.5 L541.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g></g><g transform="translate(51,20)" visibility="visible"><g><path cs="100,100" d="M0.5,295.5 L0.5,295.5 L541.5,295.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M0.5,258.5 L0.5,258.5 L541.5,258.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M0.5,221.5 L0.5,221.5 L541.5,221.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M0.5,184.5 L0.5,184.5 L541.5,184.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M0.5,148.5 L0.5,148.5 L541.5,148.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M0.5,111.5 L0.5,111.5 L541.5,111.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M0.5,74.5 L0.5,74.5 L541.5,74.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M0.5,37.5 L0.5,37.5 L541.5,37.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M0.5,0.5 L0.5,0.5 L541.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000"></path></g></g><g transform="translate(51,20)" visibility="hidden"></g></g><g transform="translate(51,20)" clip-path="url(#AmChartsEl-3)"><g visibility="hidden"></g></g><g></g><g></g><g></g><g><g transform="translate(51,20)"><g></g><g clip-path="url(#AmChartsEl-787)"><path cs="100,100" d="M13.5,148 L64.5,221.75 L142.5,74.25 L271.5,37.375 L528.5,258.625 M0,0 L0,0" fill="none" stroke-width="2" stroke-opacity="0.9" stroke="#FF6600"></path></g><clippath id="AmChartsEl-787"><rect x="0" y="0" width="541" height="295" rx="0" ry="0" stroke-width="0"></rect></clippath><g></g></g><g transform="translate(51,20)"><g></g></g><g transform="translate(51,20)"><g></g><g clip-path="url(#AmChartsEl-788)"><path cs="100,100" d="M13.5,258.625 L64.5,184.875 L142.5,148 L271.5,111.125 L528.5,74.25 M0,0 L0,0" fill="none" stroke-width="2" stroke-opacity="0.9" stroke="#FCD202"></path></g><clippath id="AmChartsEl-788"><rect x="0" y="0" width="541" height="295" rx="0" ry="0" stroke-width="0"></rect></clippath><g></g></g></g><g></g><g><g><path cs="100,100" d="M0.5,0.5 L541.5,0.5" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000" transform="translate(0,80)"></path></g><g><path cs="100,100" d="M0.5,0.5 L0.5,80.5" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000" transform="translate(51,0)" visibility="hidden"></path></g><g><path cs="100,100" d="M0.5,0.5 L541.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(51,315)"></path></g><g><path cs="100,100" d="M0.5,0.5 L0.5,295.5" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000" transform="translate(51,20)" visibility="visible"></path></g><g><path cs="100,100" d="M0.5,0.5 L0.5,295.5 L0.5,295.5" fill="none" stroke-width="2" stroke-opacity="1" stroke="#FCD202" transform="translate(592,20)" visibility="hidden"></path></g></g><g><g transform="translate(51,20)" clip-path="url(#AmChartsEl-4)" style="pointer-events: none;"><path cs="100,100" d="M0.5,0.5 L0.5,0.5 L0.5,295.5" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000" visibility="hidden" transform="translate(142,0)"></path><path cs="100,100" d="M0.5,0.5 L541.5,0.5 L541.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.2" stroke="#000000" visibility="hidden" transform="translate(0,148)"></path></g><clippath id="AmChartsEl-4"><rect x="0" y="0" width="541" height="295" rx="0" ry="0" stroke-width="0"></rect></clippath></g><g><g visibility="visible" transform="translate(51,346)" style="touch-action: none;"><rect x="0.5" y="0.5" width="542" height="80" rx="0" ry="0" stroke-width="1" fill="#000000" stroke="#000000" fill-opacity="0" stroke-opacity="0"></rect><rect x="0.5" y="0.5" width="542" height="81" rx="0" ry="0" stroke-width="0" fill="#888888" stroke="#888888" fill-opacity="0.1" stroke-opacity="0.1" transform="translate(0,0)"></rect><g transform="translate(0,0)"><g></g><g><path cs="100,100" d="M13.5,56.5 L64.5,72.5 L142.5,40.5 L271.5,32.5 L528.5,80.5 M0,0 L0,0" fill="none" stroke-width="1" stroke-opacity="0.5" stroke="#BBBBBB"></path></g><g></g></g><g transform="translate(0,0)" clip-path="url(#AmChartsEl-786)"><g></g><g><path cs="100,100" d="M13.5,56.5 L64.5,72.5 L142.5,40.5 L271.5,32.5 L528.5,80.5 M0,0 L0,0" fill="none" stroke-width="1" stroke-opacity="1" stroke="#888888"></path></g><g></g></g><g transform="translate(0,0)"><g><path cs="100,100" d="M0.5,80.5 L0.5,80.5 L0.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.15" stroke="#FFFFFF"></path></g><g><path cs="100,100" d="M129.5,80.5 L129.5,80.5 L129.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.15" stroke="#FFFFFF"></path></g><g><path cs="100,100" d="M258.5,80.5 L258.5,80.5 L258.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.15" stroke="#FFFFFF"></path></g><g><path cs="100,100" d="M386.5,80.5 L386.5,80.5 L386.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.15" stroke="#FFFFFF"></path></g><g><path cs="100,100" d="M515.5,80.5 L515.5,80.5 L515.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.15" stroke="#FFFFFF"></path></g></g><g transform="translate(0,0)" visibility="visible"><text y="6" fill="#AAAAAA" font-family="Verdana" font-size="11px" opacity="1" font-weight="bold" text-anchor="start" transform="translate(3,68.5)"><tspan y="6" x="0">00:00</tspan></text><text y="6" fill="#AAAAAA" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(132,68.5)"><tspan y="6" x="0">00:00:05</tspan></text><text y="6" fill="#AAAAAA" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(261,68.5)"><tspan y="6" x="0">00:00:10</tspan></text><text y="6" fill="#AAAAAA" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(389,68.5)"><tspan y="6" x="0">00:00:15</tspan></text></g><rect x="0.5" y="0.5" width="542" height="80" rx="0" ry="0" stroke-width="0" fill="#000" stroke="#000" fill-opacity="0.005" stroke-opacity="0.005"></rect><rect x="0" y="0.5" width="542" height="80" rx="0" ry="0" stroke-width="0" fill="#000" stroke="#000" fill-opacity="0.005" stroke-opacity="0.005" style="cursor: cursor: grab; cursor:-moz-grab; cursor:-webkit-grab;"></rect><g transform="translate(-17,23)" visibility="visible"><image x="0" y="0" width="35" height="35" xlink:href="http://www.amcharts.com/lib/3/images/dragIconRoundBig.svg"></image><rect x="0.5" y="0.5" width="25" height="80" rx="0" ry="0" stroke-width="0" fill="#000" stroke="#000" fill-opacity="0.005" stroke-opacity="0.005" transform="translate(5,-22)"></rect></g><g transform="translate(525,23)" visibility="visible"><image x="0" y="0" width="35" height="35" xlink:href="http://www.amcharts.com/lib/3/images/dragIconRoundBig.svg"></image><rect x="0.5" y="0.5" width="25" height="80" rx="0" ry="0" stroke-width="0" fill="#000" stroke="#000" fill-opacity="0.005" stroke-opacity="0.005" transform="translate(5,-22)"></rect></g><clippath id="AmChartsEl-786"><rect x="0" y="0" width="542" height="81" rx="0" ry="0" stroke-width="0"></rect></clippath></g></g><g><g transform="translate(0,0)"></g><g transform="translate(0,0)"></g><g transform="translate(51,20)"><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#FF6600" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(13,148) scale(1)" role="img" aria-label="red line 13"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#FF6600" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(64,221) scale(1)" role="img" aria-label="red line 11"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#FF6600" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(142,74) scale(1)" role="img" aria-label="red line 15"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#FF6600" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(271,37) scale(1)" role="img" aria-label="red line 16"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#FF6600" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(528,258) scale(1)" role="img" aria-label="red line 10"></circle></g><g transform="translate(51,20)"></g><g transform="translate(51,20)"><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#FCD202" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(13,258) scale(1)" role="img" aria-label="red line 10"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#FCD202" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(64,184) scale(1)" role="img" aria-label="red line 12"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#FCD202" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(142,148) scale(1)" role="img" aria-label="red line 13"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#FCD202" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(271,111) scale(1)" role="img" aria-label="red line 14"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#FCD202" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(528,74) scale(1)" role="img" aria-label="red line 15"></circle></g></g><g><g></g></g><g><g transform="translate(51,0)" visibility="hidden"></g><g transform="translate(51,20)" visibility="visible"><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" font-weight="bold" text-anchor="start" transform="translate(3,307.5)"><tspan y="6" x="0">00:00</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(132,307.5)"><tspan y="6" x="0">00:00:05</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(261,307.5)"><tspan y="6" x="0">00:00:10</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(389,307.5)"><tspan y="6" x="0">00:00:15</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(518,307.5)"><tspan y="6" x="0">00:00:20</tspan></text></g><g transform="translate(51,20)" visibility="visible"><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,293.75)"><tspan y="6" x="0">9</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,256.75)"><tspan y="6" x="0">10</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,219.75)"><tspan y="6" x="0">11</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,182.75)"><tspan y="6" x="0">12</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,146.75)"><tspan y="6" x="0">13</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,109.75)"><tspan y="6" x="0">14</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,72.75)"><tspan y="6" x="0">15</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,35.75)"><tspan y="6" x="0">16</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,-1.25)"><tspan y="6" x="0">17</tspan></text></g><g transform="translate(51,20)" visibility="hidden"></g></g><g></g><g transform="translate(51,20)"></g><g><g transform="translate(509,28)" visibility="hidden"><rect x="0.5" y="0.5" width="92" height="33" rx="0" ry="0" stroke-width="1" fill="#000000" stroke="#000000" fill-opacity="1" stroke-opacity="1" opacity="0" transform="translate(-8,-8)"></rect><image x="0" y="0" width="19" height="19" xlink:href="http://www.amcharts.com/lib/3/images/lens.svg"></image><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(24,7)"><tspan y="6" x="0">Show all</tspan></text></g></g><g></g><clippath id="AmChartsEl-3"><rect x="0" y="0" width="541" height="295" rx="0" ry="0" stroke-width="0"></rect></clippath></svg><a href="http://www.amcharts.com/javascript-charts/" title="JavaScript charts" style="position: absolute; text-decoration: none; color: rgb(0, 0, 0); font-family: Verdana; font-size: 11px; opacity: 0.7; display: block; left: 56px; top: 25px; visibility: hidden;">JS chart by amCharts</a></div></div></div>
+          </div>
+            <span class="flow-text">s12 m8 l8</span></div>
+          <div class="col s12 m4 l4 eventList">
+            <ul class="collapsible" data-collapsible="accordion" id="eventCollapse">
+             <!-- <li>
+               <div class="collapsible-header">First</div>
+               <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+             </li>
+             <li>
+               <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+               <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+             </li> -->
+             <!-- <li>
+               <div class="collapsible-header">whatshot</div>
+               <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+             </li> -->
+            </ul>
+
+          </div>
+        </div>
+        </div>
+      </div>
+    
+
+
+    <!--Import jQuery before materialize.js-->
+    <script src="./project2_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./project2_files/jquery-ui.js"></script>
+    <!-- dateTime -->
+    <!-- <script type="text/javascript" src="datetime/jquery-ui-timepicker-addon.js"></script> -->
+    <!-- <script type='text/javascript' src='datetime/jquery-ui-sliderAccess.js'></script> -->
+    <!-- materialize -->
+    <script type="text/javascript" src="./project2_files/materialize.min.js"></script>
+    <script type="text/javascript">var qVResult =[];</script>
+    <script type="text/javascript">var qEResult =[];</script>
+    <script src="./project2_files/amcharts.js"></script>
+    <script src="./project2_files/serial.js"></script>
+    <script src="./project2_files/light.js"></script>
+    <script src="./project2_files/chart.js"></script>
+    <script src="./project2_files/myScript.js"></script><div class="drag-target" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
+
+
+
+  
+
+<div class="hiddendiv common"></div></body></html>
