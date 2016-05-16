@@ -22,9 +22,19 @@
 
     .vis-item {
       background-color: #fff;
-      font-size: 15pt;
+      border-color: #512da8;
+      font-size: 6pt;
+      border-radius: 0;
       color: #512da8;
+      font-weight: bold;
 /*      box-shadow: 5px 5px 20px rgba(128,128,128, 0.5);*/
+    }
+
+    .vis-item.vis-selected {
+      background-color: white;
+      border-color: black;
+      color: black;
+      box-shadow: 0 0 10px gray;
     }
 
     .vis-item.vis-background.odd {
@@ -36,9 +46,9 @@
       color: #512da8;
     }
 
-    .vis-item .vis-item-overflow {
+/*    .vis-item .vis-item-overflow {
     overflow: visible;
-    }id
+    }*/
 
     #visualization {
         position: relative;
@@ -115,6 +125,8 @@
  
 <div id="slider-range"></div>
 
+<div ><img id="pic" src="img/1.png"></img></div>
+
 <script type="text/javascript">
  
   var names = ['Body  Frame Number','Depth Frame Number'];
@@ -130,16 +142,16 @@
       content: '0', 
       group : 0,
       start: "2016-04-29 15:10:44.753",  
-      end:   "2016-04-29 15:10:44.797", 
-      type: 'background',
+      end:   "2016-04-29 15:10:44.796", 
+      // type: 'background',
       className: 'even'
     },
     { id: 1, 
       content: '1',
       group : 0, 
       start: "2016-04-29 15:10:44.797",  
-      end:   "2016-04-29 15:10:44.813", 
-      type: 'background', 
+      end:   "2016-04-29 15:10:44.812", 
+      // type: 'background', 
       className: 'odd'
     },
     { id: 2, 
@@ -147,7 +159,7 @@
       group : 0,
       start: "2016-04-29 15:10:44.813",  
       end:   "2016-04-29 15:10:44.829", 
-      type: 'background', 
+      // type: 'background', 
       className: 'even'
     },
     { id: 3, 
@@ -155,7 +167,7 @@
       group : 0,
       start: "2016-04-29 15:10:44.829",  
       end:   "2016-04-29 15:10:44.863", 
-      type: 'background', 
+      // type: 'background', 
       className: 'odd'
     },
     { id: 4, 
@@ -163,7 +175,7 @@
       group : 0,
       start: "2016-04-29 15:10:44.863",  
       end:   "2016-04-29 15:10:44.896", 
-      type: 'background', 
+      // type: 'background', 
       className: 'even'
     },
     { id: 5, 
@@ -171,7 +183,7 @@
       group : 0,
       start: "2016-04-29 15:10:44.896",  
       end:   "2016-04-29 15:10:45.900", 
-      type: 'background', 
+      // type: 'background', 
       className: 'odd'
     },
     { id: 1000, 
@@ -297,6 +309,7 @@
   // max: "2016-04-29 15:10:45.230",
   align: 'center',
   stack: true,  
+  selectable: true,
   // width: '50%',
   // format:{
   //         majorLabels: {
@@ -311,10 +324,22 @@
   //         }
   //       },
   margin: {
-      item: 20,
+      item: 0,
       axis: 0
     }
   }
+
+  document.getElementById('visualization').onclick = function (event) {
+  // var props = timeline.getEventProperties(event)
+  var props = timeline.getSelection()
+  console.log(props[0]);  
+  var x = props[0];
+  var new_source_for_image = "img/" + x + ".png"; // I WANT IT TO BE image_src_1
+
+  $('#pic').attr("src",new_source_for_image);
+  }
+
+
 
   var timeline = new vis.Timeline(container, items, options);
   timeline.setGroups(groups);
