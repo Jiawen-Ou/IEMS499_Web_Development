@@ -118,7 +118,7 @@
 
 <div class="panel panel-default" style="margin-top:20px">
   <div class="panel-heading">Current Frame Picture</div>
-  <div class="panel-body"><img id="pic" width="50%" height ="50%" src=""></img></div>
+  <div class="panel-body" style="text-align: center"><img id="pic" width="50%" height ="50%" src=""></img></div>
 </div>
 
 <div id="visualization"></div>
@@ -141,7 +141,7 @@
  
   var names = ['Body  Frame Number','Depth Frame Number'];
   var groups = new vis.DataSet();
-  for (var g = 0; g < 3; g++) {
+  for (var g = 0; g < 2; g++) {
     groups.add({id: g, content: names[g]});
   }
 
