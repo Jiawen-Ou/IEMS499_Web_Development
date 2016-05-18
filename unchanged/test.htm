@@ -52,7 +52,7 @@
       <div class="panel-heading panel-title collapsible-header">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
             <span class="glyphicon glyphicon-collapse-down icon-success"></span>
-            Building{{my.building}}
+            Building&nbsp&nbsp{{my.building}}
           </a>
       </div>
       <div id="collapse1" class="panel-collapse collapse">
@@ -67,17 +67,23 @@
 
     <div class="panel panel-default collapsible">
       <div class="panel-heading panel-title collapsible-header">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
             <span class="glyphicon glyphicon-collapse-down icon-success"></span>
-        Room{{my.room}}
-      </a>
+            Room  {{my.room}}
+        </a>
+
       </div>
       <div id="collapse2" class="panel-collapse collapse">
         <div class="panel-body">
-      <li ng-repeat="r in rooms" class="subGroup">
+      <!-- <li ng-repeat="r in rooms" class="subGroup">
                 <input class="with-gap" name="room" type="radio" ng-model="my.room" ng-value="r.Id" id="r{{r.Id}}">
                 <label for="r{{r.Id}}">&nbsp&nbsp{{r.Name}}</label>
-      </li>
+      </li> -->
+          <textarea class="with-gap form-control" style="text-align: center" rows="1" cols="1"name="room" type="text" ng-model="my.room" value="" id="roomnumber"> </textarea>
+  <!--         <div class="col-xs-3"> -->
+        <!--     <label for="ex2">col-xs-3</label> -->
+<!--             <input class="with-gap form-control" name="room" type="text" ng-model="my.room" id="roomnumber" type="text"> -->
+          </div>
         </div>
       </div>
     </div>
@@ -86,7 +92,7 @@
       <div class="panel-heading panel-title collapsible-header">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
             <span class="glyphicon glyphicon-collapse-down icon-success"></span>
-        Kinect{{my.kinect}}
+            Kinect&nbsp&nbsp{{my.kinect}}
       </a>
       </div>
       <div id="collapse3" class="panel-collapse collapse">
